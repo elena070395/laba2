@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * Decompiled with CFR 0_102.
  */
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -19,6 +19,20 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
+    /**
+     * @param shape_type
+     * Class ShapeFactory responsible for the type of figure.
+     * Switch shape_type/10 case1: Figure hexagon.
+     * Case 3: Figure star
+     * case 5: figure square
+     * case 7: figure triangle
+     * case 9: figure round without sector
+     * Switch (shape_type % 10)
+     * case 1: Linewidth 3px
+     * case 4: Linewidth 7px
+     * case 7: Gradient
+     * case 8: Red color figure.
+     */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {
@@ -80,18 +94,17 @@ public class ShapeFactory {
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();
-        int i = 0;
-        while (i < 2 * arms) {
+        for (int i = 0; i < 2 * arms; ++i) {
             double r = (i & 1) == 0 ? rOuter : rInner;
             Point2D.Double p = new Point2D.Double((double)center.x + Math.cos((double)i * angle) * r, (double)center.y + Math.sin((double)i * angle) * r);
             if (i == 0) {
                 path.moveTo(p.getX(), p.getY());
-            } else {
-                path.lineTo(p.getX(), p.getY());
+                continue;
             }
-            ++i;
+            path.lineTo(p.getX(), p.getY());
         }
         path.closePath();
         return path;
     }
 }
+

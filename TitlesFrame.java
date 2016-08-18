@@ -1,6 +1,7 @@
 /*
- * Decompiled with CFR 0_115.
+ * Decompiled with CFR 0_102.
  */
+//import TitlesPanel;
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -11,10 +12,13 @@ extends JFrame {
         this.initUI();
     }
 
+    /**
+     * This method create GUI: size, location in window, title.
+     */
     private void initUI() {
         this.setTitle("\u041a\u0440\u0438\u0432\u044b\u0435 \u0444\u0438\u0433\u0443\u0440\u044b");
         this.setDefaultCloseOperation(3);
-        this.add(new TitlesPanel(78));
+        this.add(new TitlesPanel(91));
         this.setSize(350, 350);
         this.setLocationRelativeTo(null);
     }
@@ -31,3 +35,4 @@ extends JFrame {
     }
 
 }
+

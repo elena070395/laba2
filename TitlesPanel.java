@@ -1,6 +1,7 @@
 /*
- * Decompiled with CFR 0_115.
+ * Decompiled with CFR 0_102.
  */
+//import ShapeFactory;
 import java.awt.BasicStroke;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -25,6 +26,7 @@ implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -39,6 +41,12 @@ implements ActionListener {
         }
     }
 
+    /**
+     * @param g
+     * In this method used for drawing shapes. RenderingHint to smooth the figure.
+     * Class ShapeFactory determines the shape.
+     * AffineTransform to rotate shapes.
+     */
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
@@ -77,3 +85,4 @@ implements ActionListener {
         this.doDrawing(g);
     }
 }
+
