@@ -21,17 +21,17 @@ public class ShapeFactory {
 
     /**
      * @param shape_type
-     * Class ShapeFactory responsible for the type of figure.
-     * Switch shape_type/10 case1: Figure hexagon.
-     * Case 3: Figure star
-     * case 5: figure square
-     * case 7: figure triangle
-     * case 9: figure round without sector
+     * Класс ShapeFactory отвечает за тип фигуры.
+     * Switch shape_type/10 case1: Рисунок шестиугольник.
+     * Case 3:  Рисунок звезда.
+     * case 5: фигурка квадрат.
+     * case 7: фигура треугольник.
+     * case 9: цифра круглая без сектора.
      * Switch (shape_type % 10)
-     * case 1: Linewidth 3px
-     * case 4: Linewidth 7px
-     * case 7: Gradient
-     * case 8: Red color figure.
+     * case 1: 3px Ширина линии.
+     * case 4: Ширина линии 7px.
+     * case 7: Градиент.
+     * case 8: Красный цвет фигуры.
      */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
@@ -90,6 +90,10 @@ public class ShapeFactory {
             }
         }
     }
+	
+/**
+* Метод для определения размещения фигуры.
+*/
 
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;

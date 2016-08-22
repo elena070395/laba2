@@ -26,6 +26,10 @@ implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+	/**
+	* @param _shape
+	* Метод для создания анимации.
+	*/
 
     public TitlesPanel(int _shape) {
         this.shape = _shape;
@@ -43,9 +47,9 @@ implements ActionListener {
 
     /**
      * @param g
-     * In this method used for drawing shapes. RenderingHint to smooth the figure.
-     * Class ShapeFactory determines the shape.
-     * AffineTransform to rotate shapes.
+     * В это метод, используемый для фигур чертежей. RenderingHint сгладить фигуру.
+     * Класс ShapeFactory определяет форму.
+     * AffineTransform для поворота фигуры.
      */
     private void doDrawing(Graphics g) {
         this.is_done = false;
