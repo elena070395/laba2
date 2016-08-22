@@ -1,7 +1,3 @@
-/*
- * Decompiled with CFR 0_102.
- */
-//import ShapeFactory;
 import java.awt.BasicStroke;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -17,6 +13,7 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+
 public class TitlesPanel
 extends JPanel
 implements ActionListener {
@@ -26,11 +23,13 @@ implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+	
 	/**
 	* @param _shape
 	* Метод для создания анимации.
 	*/
 
+	
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -38,6 +37,7 @@ implements ActionListener {
         this.animation.start();
     }
 
+	
     @Override
     public void actionPerformed(ActionEvent arg0) {
         if (this.is_done) {
@@ -45,6 +45,7 @@ implements ActionListener {
         }
     }
 
+	
     /**
      * @param g
      * В это метод, используемый для фигур чертежей. RenderingHint сгладить фигуру.
@@ -83,6 +84,7 @@ implements ActionListener {
         this.is_done = true;
     }
 
+	
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

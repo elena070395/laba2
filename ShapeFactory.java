@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0_102.
- */
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -91,10 +88,9 @@ public class ShapeFactory {
         }
     }
 	
-/**
-* Метод для определения размещения фигуры.
-*/
-
+  /**
+  * Метод для определения размещения фигуры.
+  */
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();

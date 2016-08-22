@@ -1,10 +1,7 @@
-/*
- * Decompiled with CFR 0_102.
- */
-//import TitlesPanel;
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+
 
 public class TitlesFrame
 extends JFrame {
@@ -12,6 +9,7 @@ extends JFrame {
         this.initUI();
     }
 
+	
     /**
      * Этот метод создания графического интерфейса пользователя : размер, местоположение в окне, название .
      */
@@ -23,10 +21,10 @@ extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
+	
 	/**
 	* Создание фрейма.
-	*/
-	
+	*/	
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
 
